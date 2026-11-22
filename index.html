@@ -114,10 +114,12 @@
       content="https://sriashwiniphysiotherapyclinic.com/og-image.jpg"
     />
 
-    <!-- Local Business SEO Schema -->
-    <script type="application/ld+json">
+   <!-- Structured Data / Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "@id": "https://sriashwiniphysiotherapyclinic.com/#clinic",
       "name": "Sri Ashwini Physiotherapy Clinic",
@@ -140,9 +142,89 @@
         "@type": "City",
         "name": "Rajahmundry"
       },
-      "hasMap": "https://maps.app.goo.gl/pF8WpdnFY5EQJ7tw6"
+      "medicalSpecialty": "https://schema.org/Physiotherapy",
+      "hasMap": "https://maps.app.goo.gl/pF8WpdnFY5EQJ7tw6",
+      "sameAs": [
+        "https://www.instagram.com/sriashwiniphysiotherapyclinic/",
+        "https://www.youtube.com/@sriashwiniphysiotherapyclinic"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://sriashwiniphysiotherapyclinic.com/#organization",
+      "name": "Sri Ashwini Physiotherapy Clinic",
+      "url": "https://sriashwiniphysiotherapyclinic.com/",
+      "description": "Sri Ashwini Physiotherapy Clinic in Danavaipeta, Rajahmundry.",
+      "sameAs": [
+        "https://www.instagram.com/sriashwiniphysiotherapyclinic/",
+        "https://www.youtube.com/@sriashwiniphysiotherapyclinic"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sriashwiniphysiotherapyclinic.com/#website",
+      "url": "https://sriashwiniphysiotherapyclinic.com/",
+      "name": "Sri Ashwini Physiotherapy Clinic",
+      "publisher": {
+        "@id": "https://sriashwiniphysiotherapyclinic.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://sriashwiniphysiotherapyclinic.com/#webpage",
+      "url": "https://sriashwiniphysiotherapyclinic.com/",
+      "name": "Physiotherapy Clinic in Rajahmundry | Sri Ashwini",
+      "description": "Sri Ashwini Physiotherapy Clinic in Danavaipeta, Rajahmundry offers physiotherapy care for back pain, neck pain, knee pain, shoulder pain and sports injuries.",
+      "isPartOf": {
+        "@id": "https://sriashwiniphysiotherapyclinic.com/#website"
+      },
+      "about": {
+        "@id": "https://sriashwiniphysiotherapyclinic.com/#clinic"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://sriashwiniphysiotherapyclinic.com/#electro-therapy",
+      "name": "Electro Therapy",
+      "provider": {
+        "@id": "https://sriashwiniphysiotherapyclinic.com/#clinic"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://sriashwiniphysiotherapyclinic.com/#manual-therapy",
+      "name": "Manual Therapy",
+      "provider": {
+        "@id": "https://sriashwiniphysiotherapyclinic.com/#clinic"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://sriashwiniphysiotherapyclinic.com/#cupping-therapy",
+      "name": "Cupping Therapy",
+      "provider": {
+        "@id": "https://sriashwiniphysiotherapyclinic.com/#clinic"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://sriashwiniphysiotherapyclinic.com/#exercise-therapy",
+      "name": "Exercise Therapy",
+      "provider": {
+        "@id": "https://sriashwiniphysiotherapyclinic.com/#clinic"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://sriashwiniphysiotherapyclinic.com/#dry-needling",
+      "name": "Dry Needling",
+      "provider": {
+        "@id": "https://sriashwiniphysiotherapyclinic.com/#clinic"
+      }
     }
-    </script>
+  ]
+}
+</script>
 
     <!-- Favicon -->
     <link

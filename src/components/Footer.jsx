@@ -25,6 +25,7 @@ const links = [
   ["Our Doctor", "/#doctor"],
   ["Gallery", "/#gallery"],
   ["Contact", "/#contact"],
+  ["Terms & Conditions", "/terms"],
 ];
 
 const contactNumbers = [

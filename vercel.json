@@ -1,0 +1,38 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(.*)text/markdown(.*)"
+        }
+      ],
+      "destination": "/homepage.md"
+    }
+  ],
+
+  "headers": [
+    {
+      "source": "/homepage.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://sriashwiniphysiotherapyclinic.com/llms.txt>; rel=\"describedby\", <https://sriashwiniphysiotherapyclinic.com/homepage.md>; rel=\"alternate\"; type=\"text/markdown\""
+        }
+      ]
+    }
+  ]
+}

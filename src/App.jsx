@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
+import Terms from "./pages/Terms";
 
 import { MessageCircle } from "lucide-react";
 
@@ -141,6 +142,12 @@ export default function App() {
               </main>
             }
           />
+
+          <Route 
+          path="/terms"
+          element={<Terms />}
+          />
+          
         </Routes>
       </Suspense>
 

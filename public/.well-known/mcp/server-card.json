@@ -1,0 +1,18 @@
+{
+  "serverInfo": {
+    "name": "sri-ashwini-physiotherapy-clinic",
+    "title": "Sri Ashwini Physiotherapy Clinic",
+    "version": "1.0.0"
+  },
+  "description": "Public agent-accessible information for Sri Ashwini Physiotherapy Clinic in Danavaipeta, Rajahmundry, Andhra Pradesh.",
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "/mcp"
+  },
+  "tools": [
+    {
+      "name": "get_clinic_information",
+      "description": "Provides public clinic information including services, location, phone numbers and website."
+    }
+  ]
+}

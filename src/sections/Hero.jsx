@@ -86,14 +86,14 @@ export default function Hero() {
 
         <div className="hero-title-wrap">
 
-          <motion.h1 variants={textReveal}>
-            Sri Ashwini Physiotherapy Clinic
-            <br />
+        <motion.h1 variants={textReveal}>
+          Sri Ashwini Physiotherapy Clinic
+          <br />
 
-            <span className="hero-title-highlight">
-              <em>in Rajahmundry.</em>
-            </span>
-          </motion.h1>
+          <span className="hero-title-highlight">
+            <em>Trusted Physiotherapy Center in Rajahmundry.</em>
+          </span>
+        </motion.h1>
 
         </div>
 
@@ -106,15 +106,15 @@ export default function Hero() {
           <span />
         </motion.div>
 
-        <motion.h2
-          className="hero-description"
-          variants={smoothReveal}
-        >
-          Discover the art of better movement with personalised
-          physiotherapy care in Danavaipeta, Rajahmundry.
-          Focused on movement, strength and helping you feel
-          more confident every day.
-        </motion.h2>
+        <motion.p
+         className="hero-description"
+         variants={smoothReveal}
+         >
+           Discover the art of better movement with personalised
+           physiotherapy care in Danavaipeta, Rajahmundry.
+           Focused on movement, strength and helping you feel
+           more confident every day.
+        </motion.p>
 
         {/* BUTTONS */}
         <motion.div
