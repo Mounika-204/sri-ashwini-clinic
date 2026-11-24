@@ -821,7 +821,7 @@ p {
 
 .contact-card > span {
   display: block;
-  color: #0b9c96;
+  color: #0b6f6b;
   font-size: 9px;
   letter-spacing: 2px;
   font-weight: 800;
@@ -941,7 +941,7 @@ p {
   gap: 10px;
   padding: 14px 19px;
   border-radius: 40px;
-  background: #16bb75;
+  background: #087a4b;
   color: white;
   font-size: 11px;
   font-weight: 800;
@@ -4921,6 +4921,7 @@ p {
   line-height: 1.5;
   margin: 0;
 }
+
 
 .highlight-sparkle {
   color: #a8eadb;
@@ -11720,4 +11721,35 @@ body {
   height: 100%;
   min-height: 420px;
   contain: strict;
+}
+
+
+
+
+
+/* ACCESSIBILITY FIX - CONTACT SECTION */
+
+/* Contact card labels */
+.contact-card > span {
+  color: #07534f !important;
+}
+
+/* Contact card descriptions */
+.contact-card p {
+  color: #526477 !important;
+}
+
+/* Contact card text */
+.contact-card h3 {
+  color: #102d50 !important;
+}
+
+/* WhatsApp button contrast */
+.floating-whatsapp,
+.floating-whatsapp span {
+  color: #ffffff !important;
+}
+
+.floating-whatsapp {
+  background: #075b3b !important;
 }

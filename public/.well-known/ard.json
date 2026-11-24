@@ -1,0 +1,17 @@
+
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "identifier": "urn:air:sriashwiniphysiotherapyclinic.com:webmcp:main",
+      "displayName": "Sri Ashwini Physiotherapy Clinic WebMCP",
+      "type": "application/ai-catalog+json",
+      "url": "https://sriashwiniphysiotherapyclinic.com/",
+      "representativeQueries": [
+        "book an appointment at Sri Ashwini Physiotherapy Clinic",
+        "find physiotherapy services at Sri Ashwini Physiotherapy Clinic",
+        "find physiotherapy treatment options in Rajahmundry"
+      ]
+    }
+  ]
+} 
