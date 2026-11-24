@@ -12,6 +12,10 @@
         }
       ],
       "destination": "/homepage.md"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
 
