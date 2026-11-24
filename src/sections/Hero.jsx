@@ -15,20 +15,8 @@ const Hero3D = lazy(() => import("../components/Hero3D"));
 export default function Hero() {
   const reduce = useReducedMotion();
 
-  const textReveal = {
-    hidden: {
-      opacity: 0,
-      y: 25,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: reduce ? 0 : 0.65,
-        ease: [0.22, 1, 0.36, 1],
-      },
-    },
-  };
+  
+  
 
   const smoothReveal = {
     hidden: {
@@ -88,14 +76,14 @@ export default function Hero() {
 
         <div className="hero-title-wrap">
 
-        <motion.h1 variants={textReveal}>
+        <h1>
           Sri Ashwini Physiotherapy Clinic
           <br />
 
           <span className="hero-title-highlight">
             <em>Trusted Physiotherapy Center in Rajahmundry.</em>
           </span>
-        </motion.h1>
+       </h1>
 
         </div>
 
