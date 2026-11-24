@@ -18,8 +18,33 @@ export default function Hero() {
     const [loadHero3D, setLoadHero3D] = useState(false);
 
   useEffect(() => {
-    setLoadHero3D(true);
-  }, []);
+  let idleCallbackId;
+  let timeoutId;
+
+  if (typeof window.requestIdleCallback === "function") {
+    idleCallbackId = window.requestIdleCallback(
+      () => setLoadHero3D(true),
+      { timeout: 1200 }
+    );
+  } else {
+    timeoutId = window.setTimeout(() => {
+      setLoadHero3D(true);
+    }, 400);
+  }
+
+  return () => {
+    if (
+      idleCallbackId !== undefined &&
+      typeof window.cancelIdleCallback === "function"
+    ) {
+      window.cancelIdleCallback(idleCallbackId);
+    }
+
+    if (timeoutId !== undefined) {
+      window.clearTimeout(timeoutId);
+    }
+  };
+}, []);
   
 
   const smoothReveal = {
