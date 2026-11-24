@@ -2012,11 +2012,9 @@ p {
 .about-story-image {
   position: relative;
   transform-style: preserve-3d;
-  will-change: transform;
   box-shadow:
     0 35px 80px rgba(7, 26, 56, 0.20),
     0 15px 35px rgba(19, 189, 169, 0.12);
-  animation: aboutImageFloat 6s ease-in-out infinite;
 }
 
 .about-story-image img {
@@ -2038,28 +2036,32 @@ p {
 
 /* 3D image shine */
 
+
 .about-image-shine {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: -75%;
+  width: 55%;
   z-index: 3;
   pointer-events: none;
   background: linear-gradient(
     115deg,
-    transparent 25%,
-    rgba(255,255,255,0.18) 45%,
-    transparent 65%
+    transparent 15%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 85%
   );
-  background-size: 250% 100%;
+  transform: translate3d(0, 0, 0);
   animation: imageShine 7s ease-in-out infinite;
 }
 
 @keyframes imageShine {
   0%, 100% {
-    background-position: 150% 0;
+    transform: translate3d(0, 0, 0);
   }
 
   50% {
-    background-position: -150% 0;
+    transform: translate3d(300%, 0, 0);
   }
 }
 
@@ -2156,10 +2158,6 @@ p {
 ========================================== */
 
 @media (max-width: 760px) {
-  .about-story-image {
-    animation: aboutImageFloat 7s ease-in-out infinite;
-  }
-
   .about-image-shine {
     animation-duration: 10s;
   }
@@ -7742,14 +7740,10 @@ p {
   display: block;
   transform: translateZ(25px);
   backface-visibility: hidden;
-  transition: filter 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
-.footer-logo-icon:hover .footer-logo-image {
-  filter: drop-shadow(
-    0 15px 15px rgba(7, 158, 153, 0.4)
-  );
-}
+
 
 @media (max-width: 768px) {
   .footer-logo-icon {

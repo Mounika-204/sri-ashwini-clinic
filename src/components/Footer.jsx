@@ -157,26 +157,10 @@ function Footer() {
             }}
           >
             <motion.img
-              src="/images/logo-optimized.webp"
-              alt="Sri Ashwini Physiotherapy Clinic logo, Rajahmundry"
-              className="footer-logo-image"
-              animate={
-                reduce
-                  ? {}
-                  : {
-                      filter: [
-                        "drop-shadow(0px 5px 5px rgba(0,0,0,0.15))",
-                        "drop-shadow(0px 12px 12px rgba(7,158,153,0.35))",
-                        "drop-shadow(0px 5px 5px rgba(0,0,0,0.15))",
-                      ],
-                    }
-              }
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
+  src="/images/logo-optimized.webp"
+  alt="Sri Ashwini Physiotherapy Clinic logo, Rajahmundry"
+  className="footer-logo-image"
+/>
           </motion.div>
 
           <h2>Sri Ashwini</h2>
