@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap'); */
 
 :root {
   --primary-navy: #102D50;
@@ -2203,7 +2203,7 @@ p {
   width: 330px;
   height: 330px;
   border-radius: 50%;
-  filter: blur(2px);
+  filter: none;
   pointer-events: none;
   animation: conditionsOrbFloat 9s ease-in-out infinite;
 }
@@ -2844,7 +2844,7 @@ p {
   border-radius: 50%;
   filter: blur(90px);
   pointer-events: none;
-  animation: treatmentGlow 9s ease-in-out infinite alternate;
+  animation: treatmentGlow 18s ease-in-out infinite alternate;
 }
 
 .glow-one {
@@ -3552,12 +3552,23 @@ p {
   background: #4ce2b5;
   border-radius: 50%;
   box-shadow: 0 0 15px #4ce2b5;
-  animation: doctorDotPulse 1.8s infinite;
+  animation: doctorDotPulse 1.8s infinite ease-in-out;
+  will-change: transform, opacity;
 }
 
 @keyframes doctorDotPulse {
-  50% { box-shadow: 0 0 3px #4ce2b5, 0 0 22px #4ce2b5; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 0.75;
+  }
 }
+
 
 .doctor-orbit-scene {
   position: relative;
@@ -3670,7 +3681,7 @@ p {
   aspect-ratio: 1;
   border-radius: 50%;
   background: rgba(67, 231, 196, .14);
-  filter: blur(28px);
+  filter: none;
   animation: doctorHalo 4s ease-in-out infinite alternate;
 }
 
@@ -3684,7 +3695,7 @@ p {
   width: 37%;
   height: 37%;
   color: #b4f4e3;
-  filter: drop-shadow(0 8px 20px rgba(65, 255, 214, .3));
+  
   animation: doctorIconFloat 4s ease-in-out infinite;
 }
 
@@ -3747,7 +3758,7 @@ p {
   height: 9px;
   border-radius: 50%;
   background: #83f1d5;
-  box-shadow: 0 0 20px #58e9c6;
+  /* box-shadow: 0 0 20px #58e9c6; */
   animation: doctorParticle 4s ease-in-out infinite;
 }
 
@@ -4278,7 +4289,7 @@ p {
   border-radius: 50%;
   filter: blur(100px);
   pointer-events: none;
-  animation: galleryGlowMove 10s ease-in-out infinite alternate;
+  animation: galleryGlowMove 20s ease-in-out infinite alternate;
 }
 
 .gallery-glow-one {
@@ -4779,7 +4790,7 @@ p {
   top: -150px;
   right: 15%;
   background: radial-gradient(circle, rgba(39, 205, 185, .2), transparent 70%);
-  animation: appointmentOrbOne 10s ease-in-out infinite alternate;
+  animation: appointmentOrbOne 20s ease-in-out infinite alternate;
 }
 
 .appointment-bg-orb.orb-two {
@@ -4788,7 +4799,7 @@ p {
   bottom: -100px;
   left: 20%;
   background: radial-gradient(circle, rgba(201, 229, 194, .15), transparent 70%);
-  animation: appointmentOrbTwo 12s ease-in-out infinite alternate;
+  animation: appointmentOrbTwo 24s ease-in-out infinite alternate;
 }
 
 @keyframes appointmentOrbOne {
@@ -4904,7 +4915,7 @@ p {
   margin-bottom: 6px;
 }
 
-.appointment-highlight h4 {
+.appointment-highlight h3 {
   color: white;
   font-size: 15px;
   line-height: 1.5;
@@ -5676,7 +5687,7 @@ p {
   top: -180px;
   left: -130px;
   background: radial-gradient(circle, rgba(57, 211, 183, .19), transparent 70%);
-  animation: whyGlowOne 10s ease-in-out infinite alternate;
+  animation: whyGlowOne 20s ease-in-out infinite alternate;
 }
 
 .why-glow-two {
@@ -5685,7 +5696,7 @@ p {
   right: -180px;
   bottom: -200px;
   background: radial-gradient(circle, rgba(71, 175, 159, .17), transparent 70%);
-  animation: whyGlowTwo 12s ease-in-out infinite alternate;
+  animation: whyGlowTwo 24s ease-in-out infinite alternate;
 }
 
 @keyframes whyGlowOne {
@@ -6733,7 +6744,7 @@ p {
   border-radius: 50%;
   filter: blur(3px);
   pointer-events: none;
-  animation: footerOrb 9s ease-in-out infinite alternate;
+  animation: footerOrb 18s ease-in-out infinite alternate;
 }
 
 .footer-glow-one {
@@ -7218,7 +7229,7 @@ p {
   top: -100px;
   left: 30%;
   background: rgba(61, 209, 184, 0.19);
-  animation: navOrb 7s ease-in-out infinite alternate;
+  animation: navOrb 14s ease-in-out infinite alternate;
 }
 
 .navbar-orb-two {
@@ -7227,7 +7238,7 @@ p {
   bottom: -100px;
   right: 15%;
   background: rgba(45, 157, 151, 0.22);
-  animation: navOrb 8s ease-in-out infinite alternate-reverse;
+  animation: navOrb 16s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes navOrb {
@@ -7626,7 +7637,7 @@ p {
     );
   filter: blur(12px);
   pointer-events: none;
-  animation: heroGlowPulse 5s ease-in-out infinite;
+  animation: heroGlowPulse 10s ease-in-out infinite;
 }
 
 @keyframes heroGlowPulse {
@@ -9184,7 +9195,7 @@ footer a:hover {
   color: #a9dca4;
 }
 
-.appointment-highlight h4 {
+.appointment-highlight h3 {
   color: white;
 }
 
@@ -11700,3 +11711,13 @@ body {
 
 
 
+/* =========================================
+   PERFORMANCE - 3D LOADING PLACEHOLDER
+========================================= */
+
+.hero-3d-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  contain: strict;
+}

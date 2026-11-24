@@ -146,7 +146,7 @@ export default function Appointment() {
 
             <div>
               <span>YOUR WELLNESS MATTERS</span>
-              <h4>Personal attention. Thoughtful care.</h4>
+              <h3>Personal attention. Thoughtful care.</h3>
             </div>
 
             <Sparkles className="highlight-sparkle" size={21} />

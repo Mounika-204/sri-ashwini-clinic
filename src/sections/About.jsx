@@ -95,7 +95,7 @@ export default function About() {
           style={{ transformStyle: "preserve-3d" }}
         >
           <motion.img
-            src="/images/about-clinic.jpg"
+            src="/images/optimized/about-clinic.webp"
             alt="Sri Ashwini Physiotherapy Clinic in Danavaipeta, Rajahmundry"
             animate={
               reduce
@@ -106,7 +106,7 @@ export default function About() {
                   }
             }
             transition={{
-              duration: 8,
+              duration:16,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -237,7 +237,7 @@ export default function About() {
               className="purpose-icon"
               animate={reduce ? {} : { y: [0, -8, 0] }}
               transition={{
-                duration: 3.5,
+                duration: 7,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -273,7 +273,7 @@ export default function About() {
               className="purpose-icon"
               animate={reduce ? {} : { y: [0, -8, 0] }}
               transition={{
-                duration: 3.5,
+                duration: 7,
                 delay: 0.5,
                 repeat: Infinity,
                 ease: "easeInOut",

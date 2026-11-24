@@ -309,9 +309,9 @@ function Scene() {
     }
 
     if (body.current) {
-      body.current.rotation.y = Math.sin(t * 0.32) * 0.24;
-      body.current.position.y = Math.sin(t * 1.15) * 0.025;
-      body.current.rotation.z = Math.sin(t * 0.45) * 0.018;
+      body.current.rotation.y = Math.sin(t * 0.28) * 0.20;
+body.current.position.y = Math.sin(t * 0.9) * 0.02;
+body.current.rotation.z = Math.sin(t * 0.4) * 0.015;
     }
 
     if (ringRefs.shoulder.current) {
@@ -356,7 +356,7 @@ export default function Hero3D() {
           position: [0, 0.1, 7],
           fov: 38,
         }}
-        dpr={[1, 1.1]}
+        dpr={[0.8, 1]}
         gl={{
           antialias: false,
           alpha: true,
@@ -389,7 +389,7 @@ export default function Hero3D() {
         <Scene />
 
         <Sparkles
-          count={20}
+          count={12}
           scale={5}
           size={1.2}
           speed={0.2}

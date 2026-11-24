@@ -91,7 +91,7 @@ export default function Navbar() {
               }}
             >
               <img
-                src="/images/logo.png (1).PNG"
+                src="/images/logo.webp"
                 alt="Sri Ashwini Physiotherapy Clinic"
               />
             </motion.div>

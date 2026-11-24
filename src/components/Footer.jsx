@@ -157,7 +157,7 @@ function Footer() {
             }}
           >
             <motion.img
-              src="/images/logo.png (1).PNG"
+              src="/images/logo.webp"
               alt="Sri Ashwini Physiotherapy Clinic logo, Rajahmundry"
               className="footer-logo-image"
               animate={

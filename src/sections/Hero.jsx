@@ -8,7 +8,9 @@ import {
   Activity,
 } from "lucide-react";
 
-import Hero3D from "../components/Hero3D";
+import { lazy, Suspense } from "react";
+
+const Hero3D = lazy(() => import("../components/Hero3D"));
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -180,8 +182,10 @@ export default function Hero() {
       >
 
         <div className="hero-3d-floating">
-          <Hero3D />
-        </div>
+  <Suspense fallback={<div className="hero-3d-placeholder" />}>
+    <Hero3D />
+  </Suspense>
+</div>
 
         {/* MODEL DECORATIVE RING */}
         <div className="hero-model-ring" />
