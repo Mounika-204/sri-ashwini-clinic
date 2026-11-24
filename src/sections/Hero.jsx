@@ -8,14 +8,18 @@ import {
   Activity,
 } from "lucide-react";
 
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 
 const Hero3D = lazy(() => import("../components/Hero3D"));
 
 export default function Hero() {
   const reduce = useReducedMotion();
 
-  
+    const [loadHero3D, setLoadHero3D] = useState(false);
+
+  useEffect(() => {
+    setLoadHero3D(true);
+  }, []);
   
 
   const smoothReveal = {
@@ -170,9 +174,13 @@ export default function Hero() {
       >
 
         <div className="hero-3d-floating">
-  <Suspense fallback={<div className="hero-3d-placeholder" />}>
-    <Hero3D />
-  </Suspense>
+  {loadHero3D ? (
+    <Suspense fallback={<div className="hero-3d-placeholder" />}>
+      <Hero3D />
+    </Suspense>
+  ) : (
+    <div className="hero-3d-placeholder" />
+  )}
 </div>
 
         {/* MODEL DECORATIVE RING */}
