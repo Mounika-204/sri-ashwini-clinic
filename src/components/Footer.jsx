@@ -1,5 +1,5 @@
 
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 
 import {
   ArrowUp,
@@ -99,7 +99,7 @@ function Footer() {
       <div className="footer-glow footer-glow-one" />
       <div className="footer-glow footer-glow-two" />
 
-      <motion.div
+      <m.div
         className="footer-floating-icon"
         animate={
           reduce
@@ -113,19 +113,19 @@ function Footer() {
         }}
       >
         <Activity size={35} />
-      </motion.div>
+      </m.div>
 
       <div className="footer-main">
 
         {/* BRAND */}
-        <motion.div
+        <m.div
           className="footer-brand-3d"
           variants={reveal}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <motion.div
+          <m.div
             className="footer-logo-icon"
             animate={
               reduce
@@ -156,12 +156,12 @@ function Footer() {
               perspective: 1000,
             }}
           >
-            <motion.img
+            <m.img
   src="/images/logo-optimized.webp"
   alt="Sri Ashwini Physiotherapy Clinic logo, Rajahmundry"
   className="footer-logo-image"
 />
-          </motion.div>
+          </m.div>
 
           <h2>Sri Ashwini</h2>
 
@@ -213,10 +213,10 @@ function Footer() {
               <ArrowUpRight size={15} />
             </a>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* QUICK LINKS */}
-        <motion.div
+        <m.div
           className="footer-links-3d"
           variants={reveal}
           initial="hidden"
@@ -232,7 +232,7 @@ function Footer() {
             aria-label="Sri Ashwini Physiotherapy Clinic website navigation"
           >
             {links.map(([name, path]) => (
-              <motion.a
+              <m.a
                 key={name}
                 href={path}
                 onClick={(e) => handleLinkClick(e, path)}
@@ -242,13 +242,13 @@ function Footer() {
               >
                 {name}
                 <ArrowUpRight size={15} />
-              </motion.a>
+              </m.a>
             ))}
           </div>
-        </motion.div>
+        </m.div>
 
         {/* CONTACT DETAILS */}
-        <motion.div
+        <m.div
           className="footer-contact-3d"
           variants={reveal}
           initial="hidden"
@@ -260,7 +260,7 @@ function Footer() {
 
           <div className="footer-phone-group">
             {contactNumbers.map((number, index) => (
-              <motion.a
+              <m.a
                 key={number}
                 href={`tel:${number}`}
                 className="footer-phone-row"
@@ -293,7 +293,7 @@ function Footer() {
                 </div>
 
                 <ArrowUpRight size={17} />
-              </motion.a>
+              </m.a>
             ))}
           </div>
 
@@ -301,7 +301,7 @@ function Footer() {
 
           {/* EMAIL */}
            {/* EMAIL */}
-<motion.a
+<m.a
   className="footer-contact-card footer-email-fix"
   href="mailto:sriashwiniphysiotherapyclinic@gmail.com"
   initial={false}
@@ -319,10 +319,10 @@ function Footer() {
   </div>
 
   <ArrowUpRight size={17} />
-</motion.a>
+</m.a>
 
           {/* LOCATION */}
-          <motion.a
+          <m.a
             className="footer-contact-card"
             href="https://maps.app.goo.gl/pF8WpdnFY5EQJ7tw6"
             target="_blank"
@@ -340,7 +340,7 @@ function Footer() {
             </div>
 
             <ArrowUpRight size={17} />
-          </motion.a>
+          </m.a>
 
           <div className="footer-appointment">
             <Activity size={19} />
@@ -348,7 +348,7 @@ function Footer() {
               Your journey to better movement starts here.
             </span>
           </div>
-        </motion.div>
+        </m.div>
       </div>
 
       <div className="footer-3d-divider" />
@@ -365,7 +365,7 @@ function Footer() {
           for better movement.
         </p>
 
-        <motion.button
+        <m.button
           type="button"
           className="footer-top-button"
           onClick={handleBackToTop}
@@ -376,10 +376,10 @@ function Footer() {
           aria-label="Back to top of Sri Ashwini Physiotherapy Clinic website"
         >
           <ArrowUp size={20} />
-        </motion.button>
+        </m.button>
       </div>
 
-      <motion.button
+      <m.button
         type="button"
         className="footer-bottom-button"
         onClick={handleScrollToBottom}
@@ -390,7 +390,7 @@ function Footer() {
         aria-label="Scroll to bottom of website"
       >
         <ArrowDown size={20} />
-      </motion.button>
+      </m.button>
     </footer>
   );
 }

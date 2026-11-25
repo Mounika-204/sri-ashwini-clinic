@@ -1,5 +1,5 @@
 
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 
 export default function Reveal({
   children,
@@ -19,7 +19,7 @@ export default function Reveal({
   const hidden = directions[direction] || directions.up;
 
   return (
-    <motion.div
+    <m.div
       className={className}
       initial={
         reduce
@@ -50,6 +50,6 @@ export default function Reveal({
       }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }

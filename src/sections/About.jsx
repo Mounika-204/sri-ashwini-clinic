@@ -1,5 +1,5 @@
 
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import {
   CheckCircle2,
   Heart,
@@ -66,7 +66,7 @@ export default function About() {
 
       <section className="about-story section" id="about">
 
-        <motion.div
+        <m.div
           className="about-story-image"
           initial={
             reduce
@@ -94,7 +94,7 @@ export default function About() {
           }
           style={{ transformStyle: "preserve-3d" }}
         >
-          <motion.img
+          <m.img
             src="/images/optimized/about-clinic-small.webp"
             alt="Sri Ashwini Physiotherapy Clinic in Danavaipeta, Rajahmundry"
             animate={
@@ -114,7 +114,7 @@ export default function About() {
 
           <div className="about-image-overlay" />
 
-          <motion.div
+          <m.div
             className="about-image-label"
             initial={reduce ? false : { opacity: 0, y: 30, z: -40 }}
             whileInView={{ opacity: 1, y: 0, z: 0 }}
@@ -123,10 +123,10 @@ export default function About() {
           >
             <span>WELCOME TO</span>
             <strong>SRI ASHWINI</strong>
-          </motion.div>
+          </m.div>
 
           {!reduce && (
-            <motion.div
+            <m.div
               className="about-image-orbit"
               animate={{ rotate: 360 }}
               transition={{
@@ -138,30 +138,30 @@ export default function About() {
           )}
 
           <div className="about-image-shine" />
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="about-story-content"
           variants={stagger}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <motion.span className="eyebrow" variants={childReveal}>
+          <m.span className="eyebrow" variants={childReveal}>
             ABOUT OUR CLINIC
-          </motion.span>
+          </m.span>
 
-          <motion.h2 variants={childReveal}>
+          <m.h2 variants={childReveal}>
             A Place Where
             <br />
             <em>Care Comes First.</em>
-          </motion.h2>
+          </m.h2>
 
-          <motion.p className="about-lead" variants={childReveal}>
+          <m.p className="about-lead" variants={childReveal}>
             Welcome to Sri Ashwini Physiotherapy Clinic in Rajahmundry.
-          </motion.p>
+          </m.p>
 
-          <motion.p variants={childReveal}>
+          <m.p variants={childReveal}>
             Located in Danavaipeta, Rajahmundry, Sri Ashwini Physiotherapy
             Clinic offers personalised physiotherapy care for individuals
             experiencing back pain, neck pain, knee pain, shoulder pain
@@ -169,37 +169,37 @@ export default function About() {
             understanding. Our approach focuses on individual attention,
             clear communication and creating a comfortable experience
             for everyone who visits our clinic.
-          </motion.p>
+          </m.p>
 
-          <motion.div className="about-points" variants={stagger}>
+          <m.div className="about-points" variants={stagger}>
             {[
               "Individual attention",
               "Comfortable environment",
               "Personalised guidance",
             ].map((item) => (
-              <motion.div key={item} variants={childReveal}>
+              <m.div key={item} variants={childReveal}>
                 <CheckCircle2 size={19} />
                 {item}
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
 
-          <motion.a
+          <m.a
             href="#appointment"
             className="text-link"
             variants={childReveal}
             whileHover={reduce ? {} : { x: 8 }}
           >
             Connect With Us <ArrowUpRight size={17} />
-          </motion.a>
-        </motion.div>
+          </m.a>
+        </m.div>
       </section>
 
       {/* MISSION AND VISION */}
 
       <section className="about-purpose">
 
-        <motion.div
+        <m.div
           className="purpose-heading"
           {...reveal}
         >
@@ -209,16 +209,16 @@ export default function About() {
             <br />
             <em>Our Promise.</em>
           </h2>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="purpose-grid"
           variants={stagger}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
         >
-          <motion.div
+          <m.div
             className="purpose-card"
             variants={childReveal}
             whileHover={
@@ -233,7 +233,7 @@ export default function About() {
             }
             style={{ transformStyle: "preserve-3d" }}
           >
-            <motion.div
+            <m.div
               className="purpose-icon"
               animate={reduce ? {} : { y: [0, -8, 0] }}
               transition={{
@@ -243,7 +243,7 @@ export default function About() {
               }}
             >
               <Target size={30} />
-            </motion.div>
+            </m.div>
 
             <span>OUR MISSION</span>
             <h3>Care With Purpose.</h3>
@@ -252,9 +252,9 @@ export default function About() {
               and supportive environment.
             </p>
             <div className="purpose-number">01</div>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             className="purpose-card purpose-card-dark"
             variants={childReveal}
             whileHover={
@@ -269,7 +269,7 @@ export default function About() {
             }
             style={{ transformStyle: "preserve-3d" }}
           >
-            <motion.div
+            <m.div
               className="purpose-icon"
               animate={reduce ? {} : { y: [0, -8, 0] }}
               transition={{
@@ -280,7 +280,7 @@ export default function About() {
               }}
             >
               <Eye size={30} />
-            </motion.div>
+            </m.div>
 
             <span>OUR VISION</span>
             <h3>Building Trust.</h3>
@@ -289,15 +289,15 @@ export default function About() {
               respected, understood and valued.
             </p>
             <div className="purpose-number">02</div>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </section>
 
       {/* WHY CHOOSE US */}
 
       <section className="about-features">
 
-        <motion.div
+        <m.div
           className="features-heading"
           {...reveal}
         >
@@ -307,9 +307,9 @@ export default function About() {
             <br />
             <em>Every Step Of The Way.</em>
           </h2>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="features-grid"
           variants={stagger}
           initial="hidden"
@@ -320,7 +320,7 @@ export default function About() {
             const Icon = item.icon;
 
             return (
-              <motion.div
+              <m.div
                 className="about-feature-card"
                 key={item.number}
                 variants={childReveal}
@@ -338,7 +338,7 @@ export default function About() {
               >
                 <span className="feature-number">{item.number}</span>
 
-                <motion.div
+                <m.div
                   className="feature-icon"
                   whileHover={
                     reduce
@@ -352,24 +352,24 @@ export default function About() {
                   transition={{ type: "spring", stiffness: 250 }}
                 >
                   <Icon size={30} />
-                </motion.div>
+                </m.div>
 
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
 
                 <div className="feature-line" />
                 <div className="feature-card-glow" />
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
+        </m.div>
       </section>
 
       {/* FINAL CTA */}
 
       <section className="about-cta">
 
-        <motion.div
+        <m.div
           className="cta-glow"
           animate={
             reduce
@@ -383,13 +383,13 @@ export default function About() {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        <motion.div
+        <m.div
           className="cta-orb cta-orb-one"
           animate={reduce ? {} : { y: [0, -25, 0], x: [0, 15, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        <motion.div
+        <m.div
           className="cta-orb cta-orb-two"
           animate={reduce ? {} : { y: [0, 20, 0], x: [0, -15, 0] }}
           transition={{
@@ -399,29 +399,29 @@ export default function About() {
           }}
         />
 
-        <motion.div
+        <m.div
           className="about-cta-content"
           variants={stagger}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <motion.span className="eyebrow" variants={childReveal}>
+          <m.span className="eyebrow" variants={childReveal}>
             WE ARE HERE FOR YOU
-          </motion.span>
+          </m.span>
 
-          <motion.h2 variants={childReveal}>
+          <m.h2 variants={childReveal}>
             Your Wellbeing
             <br />
             <em>Matters To Us.</em>
-          </motion.h2>
+          </m.h2>
 
-          <motion.p variants={childReveal}>
+          <m.p variants={childReveal}>
             Get in touch with Sri Ashwini Physiotherapy Clinic in
             Danavaipeta, Rajahmundry.
-          </motion.p>
+          </m.p>
 
-          <motion.a
+          <m.a
             href="#appointment"
             className="about-hero-btn"
             variants={childReveal}
@@ -429,8 +429,8 @@ export default function About() {
             whileTap={reduce ? {} : { scale: 0.96 }}
           >
             Connect With Us <ArrowUpRight size={18} />
-          </motion.a>
-        </motion.div>
+          </m.a>
+        </m.div>
       </section>
     </div>
   );

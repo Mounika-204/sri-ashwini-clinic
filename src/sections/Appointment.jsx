@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import Reveal from "../components/Reveal";
 import {
   ArrowUpRight,
@@ -94,15 +94,15 @@ export default function Appointment() {
         {/* LEFT CONTENT */}
         <div className="appointment-info">
 
-          <motion.div {...reveal(0)}>
+          <m.div {...reveal(0)}>
             <div className="appointment-eyebrow">
               <span className="appointment-eyebrow-line" />
               <Sparkles size={15} />
               LET'S CONNECT
             </div>
-          </motion.div>
+          </m.div>
 
-          <motion.div className="appointment-heading" {...reveal(0.12)}>
+          <m.div className="appointment-heading" {...reveal(0.12)}>
             <h2>
               Your journey
               <br />
@@ -110,16 +110,16 @@ export default function Appointment() {
               <br />
               starts here.
             </h2>
-          </motion.div>
+          </m.div>
 
-          <motion.p className="appointment-description" {...reveal(0.2)}>
+          <m.p className="appointment-description" {...reveal(0.2)}>
             Every step towards recovery matters. Connect with our clinic
             and let us help you take the next step towards comfortable,
             confident movement.
-          </motion.p>
+          </m.p>
 
           {/* Floating 3D card */}
-          <motion.div
+          <m.div
             className="appointment-highlight"
             animate={
               reduce
@@ -150,12 +150,12 @@ export default function Appointment() {
             </div>
 
             <Sparkles className="highlight-sparkle" size={21} />
-          </motion.div>
+          </m.div>
 
           {/* ALL THREE CONTACT NUMBERS */}
           <div className="appointment-contact-list">
             {contactNumbers.map((contact, index) => (
-              <motion.a
+              <m.a
                 key={contact.number}
                 href={contact.link}
                 className="appointment-phone"
@@ -176,11 +176,11 @@ export default function Appointment() {
                 </span>
 
                 <ArrowUpRight className="appointment-phone-arrow" />
-              </motion.a>
+              </m.a>
             ))}
           </div>
 
-          <motion.div
+          <m.div
             className="appointment-mini-details"
             {...reveal(0.7)}
           >
@@ -193,10 +193,10 @@ export default function Appointment() {
               <Clock3 size={19} />
               <span>Subject to availability</span>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Decorative 3D ring */}
-          <motion.div
+          <m.div
             className="appointment-3d-ring"
             animate={
               reduce
@@ -220,7 +220,7 @@ export default function Appointment() {
 
         {/* RIGHT FORM */}
         <Reveal className="appointment-form-reveal">
-          <motion.div
+          <m.div
             className="appointment-form-card"
             initial={reduce ? false : { opacity: 0, y: 60, rotateY: 12 }}
             whileInView={
@@ -311,7 +311,7 @@ export default function Appointment() {
                 />
               </label>
 
-              <motion.button
+              <m.button
                 className="appointment-submit"
                 type="submit"
                 whileHover={
@@ -327,13 +327,13 @@ export default function Appointment() {
               >
                 <span>Send Appointment Enquiry</span>
                 <ArrowUpRight size={21} />
-              </motion.button>
+              </m.button>
 
               <small className="appointment-note">
                 Appointment confirmation is subject to clinic availability.
               </small>
             </form>
-          </motion.div>
+          </m.div>
         </Reveal>
 
       </div>

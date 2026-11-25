@@ -1,5 +1,5 @@
 
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import Reveal from "../components/Reveal";
 import {
   HeartHandshake,
@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
       <div className="why-container">
 
         {/* HEADING */}
-        <motion.div
+        <m.div
           className="why-heading"
           initial={reduce ? false : { opacity: 0, y: 45 }}
           whileInView={reduce ? {} : { opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
             Thoughtful care, individual attention and a focus on
             helping you move towards a more comfortable everyday life.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* 3D FEATURE CARDS */}
         <div className="why-grid">
@@ -88,7 +88,7 @@ export default function WhyChooseUs() {
             const Icon = feature.icon;
 
             return (
-              <motion.div
+              <m.div
                 key={feature.title}
                 className={`why-card-wrap why-${feature.accent}`}
                 initial={
@@ -139,7 +139,7 @@ export default function WhyChooseUs() {
                   </div>
 
                   {/* Optimized icon animation */}
-                  <motion.div
+                  <m.div
                     className="why-icon"
                     animate={
                       reduce
@@ -160,7 +160,7 @@ export default function WhyChooseUs() {
                     </div>
 
                     <div className="why-icon-orbit" />
-                  </motion.div>
+                  </m.div>
 
                   <div className="why-card-content">
                     <h3>{feature.title}</h3>
@@ -175,7 +175,7 @@ export default function WhyChooseUs() {
                   <div className="why-card-shine" />
 
                 </article>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

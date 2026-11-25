@@ -1,5 +1,5 @@
 
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import {
   ArrowUpRight,
   Stethoscope,
@@ -39,7 +39,7 @@ export default function Doctor() {
       <div className="doctor-premium-inner">
 
         {/* LEFT - 3D MEDICAL ARTWORK */}
-        <motion.div
+        <m.div
           className="doctor-visual doctor-3d-visual"
           initial={reduce ? {} : { opacity: 0, x: -80, rotateY: 18 }}
           whileInView={reduce ? {} : { opacity: 1, x: 0, rotateY: 0 }}
@@ -60,29 +60,29 @@ export default function Doctor() {
             <div className="doctor-orbit doctor-orbit-inner" />
 
             {/* Floating icon cards */}
-            <motion.div
+            <m.div
               className="doctor-float-card doctor-float-top"
               animate={reduce ? {} : { y: [0, -13, 0], rotate: [0, 5, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
               <HeartPulse size={27} />
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               className="doctor-float-card doctor-float-bottom"
               animate={reduce ? {} : { y: [0, 12, 0], rotate: [0, -7, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             >
               <Activity size={28} />
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               className="doctor-float-card doctor-float-side"
               animate={reduce ? {} : { y: [0, -9, 0], x: [0, 5, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
             >
               <Plus size={25} />
-            </motion.div>
+            </m.div>
 
             {/* Central glass sculpture */}
             <div className="doctor-glass-sculpture">
@@ -109,24 +109,24 @@ export default function Doctor() {
             <span>02 / THOUGHTFUL CARE</span>
           </div>
 
-        </motion.div>
+        </m.div>
 
         {/* RIGHT - DOCTOR CONTENT */}
         <div className="doctor-content doctor-premium-content">
 
-          <motion.div
+          <m.div
             className="doctor-premium-eyebrow"
             {...reveal(0.1)}
           >
             <span className="doctor-eyebrow-line" />
             MEET YOUR PHYSIOTHERAPIST
-          </motion.div>
+          </m.div>
 
           {/* Animated heading */}
           <h2 className="doctor-premium-heading">
             <span className="doctor-heading-line">
               {words.map((word, index) => (
-                <motion.span
+                <m.span
                   key={word}
                   className="doctor-word"
                   initial={reduce ? {} : { opacity: 0, y: 45, rotateX: -35 }}
@@ -139,11 +139,11 @@ export default function Doctor() {
                   }}
                 >
                   {word}
-                </motion.span>
+                </m.span>
               ))}
             </span>
 
-            <motion.span
+            <m.span
               className="doctor-heading-highlight"
               initial={reduce ? {} : { opacity: 0, x: 45, filter: "blur(8px)" }}
               whileInView={reduce ? {} : { opacity: 1, x: 0, filter: "blur(0px)" }}
@@ -151,10 +151,10 @@ export default function Doctor() {
               transition={{ duration: 1, delay: 0.75 }}
             >
               Guidance with heart.
-            </motion.span>
+            </m.span>
           </h2>
 
-          <motion.div
+          <m.div
             className="doctor-name-block"
             {...reveal(0.55)}
           >
@@ -163,9 +163,9 @@ export default function Doctor() {
               <h3>Dr. Ashwini Gayatri</h3>
               <span>PHYSIOTHERAPIST</span>
             </div>
-          </motion.div>
+          </m.div>
 
-          <motion.p
+          <m.p
             className="doctor-premium-description"
             {...reveal(0.7)}
           >
@@ -173,10 +173,10 @@ export default function Doctor() {
             thoughtful attention. We focus on understanding your needs and
             providing appropriate movement-focused care with a personal
             approach.
-          </motion.p>
+          </m.p>
 
           {/* Animated values */}
-          <motion.div
+          <m.div
             className="doctor-values"
             {...reveal(0.85)}
           >
@@ -189,9 +189,9 @@ export default function Doctor() {
               <span className="doctor-value-number">02</span>
               <span>Thoughtful Guidance</span>
             </div>
-          </motion.div>
+          </m.div>
 
-          <motion.a
+          <m.a
             href="#appointment"
             className="doctor-premium-button"
             whileHover={reduce ? {} : { scale: 1.04, y: -5 }}
@@ -202,7 +202,7 @@ export default function Doctor() {
             <span className="doctor-button-icon">
               <ArrowUpRight size={20} />
             </span>
-          </motion.a>
+          </m.a>
 
         </div>
       </div>

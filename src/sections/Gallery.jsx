@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { Images, Sparkles } from "lucide-react";
 
 const images = [
@@ -276,7 +276,7 @@ export default function Gallery() {
         {/* SECTION HEADING */}
         <div className="gallery-header">
 
-          <motion.div
+          <m.div
             className="gallery-eyebrow"
             {...headingAnimation(0.05)}
           >
@@ -285,9 +285,9 @@ export default function Gallery() {
             </span>
             OUR VISUAL STORY
             <span className="gallery-eyebrow-line" />
-          </motion.div>
+          </m.div>
 
-          <motion.h2
+          <m.h2
             id="gallery-heading"
             className="gallery-main-heading"
             {...headingAnimation(0.1)}
@@ -295,24 +295,24 @@ export default function Gallery() {
             A closer look
             <br />
             <span>inside Sri Ashwini.</span>
-          </motion.h2>
+          </m.h2>
 
-          <motion.p
+          <m.p
             className="gallery-intro"
             {...headingAnimation(0.15)}
           >
             Explore the spaces, surroundings and details that make
             Sri Ashwini Physiotherapy Clinic a welcoming place for care
             in Rajahmundry.
-          </motion.p>
+          </m.p>
 
-          <motion.div
+          <m.div
             className="gallery-heading-decoration"
             {...headingAnimation(0.2)}
           >
             <Sparkles size={15} />
             <span>OUR SPACE. OUR STORY. OUR COMMITMENT.</span>
-          </motion.div>
+          </m.div>
 
         </div>
 
@@ -320,7 +320,7 @@ export default function Gallery() {
         <div className="gallery-cinematic-grid">
 
           {images.map((item, i) => (
-            <motion.div
+            <m.div
               key={item.number}
               className={`gallery-card gallery-card-${i + 1} gallery-${item.layout}`}
 
@@ -389,20 +389,20 @@ export default function Gallery() {
 
               <div className="gallery-card-edge" />
 
-            </motion.div>
+            </m.div>
           ))}
 
         </div>
 
         {/* BOTTOM DECORATION */}
-        <motion.div
+        <m.div
           className="gallery-bottom-line"
           {...headingAnimation(0.1)}
         >
           <span />
           <p>EVERY SPACE HAS A STORY TO TELL</p>
           <span />
-        </motion.div>
+        </m.div>
 
       </div>
     </section>

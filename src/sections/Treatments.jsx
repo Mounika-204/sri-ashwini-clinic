@@ -1,5 +1,5 @@
 
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import {
   Zap,
   HandHeart,
@@ -136,7 +136,7 @@ export default function Treatments() {
 
       <div className="treatments-inner">
         {/* SECTION HEADING */}
-        <motion.div
+        <m.div
           className="section-heading treatment-heading"
           {...reveal}
         >
@@ -157,7 +157,7 @@ export default function Treatments() {
             treatments designed around your movement, comfort
             and individual care needs.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* TREATMENT CARDS */}
         <div className="treatment-grid">
@@ -165,7 +165,7 @@ export default function Treatments() {
             const Icon = item.icon;
 
             return (
-              <motion.article
+              <m.article
                 key={item.title}
                 className={`treatment-card treatment-card-${i + 1}`}
                 initial={reduce ? false : "hidden"}
@@ -230,13 +230,13 @@ export default function Treatments() {
                     <ArrowUpRight size={18} />
                   </a>
                 </div>
-              </motion.article>
+              </m.article>
             );
           })}
         </div>
 
         {/* BOTTOM MESSAGE */}
-        <motion.div
+        <m.div
           className="treatment-bottom"
           {...reveal}
         >
@@ -266,7 +266,7 @@ export default function Treatments() {
             Book Consultation
             <ArrowUpRight size={19} />
           </a>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

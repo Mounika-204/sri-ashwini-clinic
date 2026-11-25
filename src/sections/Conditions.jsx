@@ -1,5 +1,5 @@
 
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import {
   Bone,
   Activity,
@@ -116,7 +116,7 @@ export default function Conditions() {
 
       <div className="conditions-container">
         {/* SECTION HEADING */}
-        <motion.div
+        <m.div
           className="conditions-heading"
           {...reveal}
         >
@@ -137,10 +137,10 @@ export default function Conditions() {
             assessment and guidance for common pain, mobility
             and movement-related concerns.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* FEATURE IMAGE */}
-        <motion.div
+        <m.div
           className="conditions-feature"
           {...reveal}
         >
@@ -173,7 +173,7 @@ export default function Conditions() {
           <div className="feature-floating-icon">
             <Activity size={28} />
           </div>
-        </motion.div>
+        </m.div>
 
         {/* CONDITION CARDS */}
         <div className="conditions-grid-heading">
@@ -188,7 +188,7 @@ export default function Conditions() {
           </p>
         </div>
 
-        <motion.div
+        <m.div
           className="condition-grid"
           variants={containerVariants}
           initial={reduce ? false : "hidden"}
@@ -199,7 +199,7 @@ export default function Conditions() {
             const Icon = item.icon;
 
             return (
-              <motion.article
+              <m.article
                 className="condition-card"
                 key={item.title}
                 variants={reduce ? undefined : cardVariants}
@@ -245,13 +245,13 @@ export default function Conditions() {
                     <ArrowUpRight size={17} />
                   </a>
                 </div>
-              </motion.article>
+              </m.article>
             );
           })}
-        </motion.div>
+        </m.div>
 
         {/* MEDICAL NOTE */}
-        <motion.div
+        <m.div
           className="conditions-note"
           {...reveal}
         >
@@ -262,7 +262,7 @@ export default function Conditions() {
             to determine appropriate care based on individual
             symptoms and healthcare needs.
           </p>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

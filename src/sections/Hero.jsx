@@ -1,5 +1,5 @@
 
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 
 import {
   ArrowDown,
@@ -81,7 +81,7 @@ export default function Hero() {
       <div className="hero-glow hero-glow-two" />
 
       {/* LEFT CONTENT */}
-      <motion.div
+      <m.div
         className="hero-content"
         initial={false}
 animate="visible"
@@ -96,7 +96,7 @@ variants={{
 }}
 >
 
-        <motion.div
+        <m.div
           className="hero-premium-eyebrow"
           variants={smoothReveal}
         >
@@ -107,7 +107,7 @@ variants={{
           SRI ASHWINI PHYSIOTHERAPY CLINIC
 
           <span className="hero-eyebrow-line" />
-        </motion.div>
+        </m.div>
 
         <div className="hero-title-wrap">
 
@@ -122,16 +122,16 @@ variants={{
 
         </div>
 
-        <motion.div
+        <m.div
           className="hero-title-decoration"
           variants={smoothReveal}
         >
           <span />
           <Sparkles size={17} />
           <span />
-        </motion.div>
+        </m.div>
 
-        <motion.p
+        <m.p
          className="hero-description"
          variants={smoothReveal}
          >
@@ -139,15 +139,15 @@ variants={{
            physiotherapy care in Danavaipeta, Rajahmundry.
            Focused on movement, strength and helping you feel
            more confident every day.
-        </motion.p>
+        </m.p>
 
         {/* BUTTONS */}
-        <motion.div
+        <m.div
           className="hero-actions"
           variants={smoothReveal}
         >
 
-          <motion.a
+          <m.a
             href="#appointment"
             className="btn btn-green hero-main-button"
             whileHover={
@@ -163,9 +163,9 @@ variants={{
           >
             Book an Appointment
             <ArrowUpRight size={19} />
-          </motion.a>
+          </m.a>
 
-          <motion.a
+          <m.a
             href="#about"
             className="hero-link"
             whileHover={
@@ -177,23 +177,23 @@ variants={{
             <span className="hero-link-icon">
               <ArrowDown size={16} />
             </span>
-          </motion.a>
+          </m.a>
 
-        </motion.div>
+        </m.div>
 
         {/* BOTTOM LABEL */}
-        <motion.div
+        <m.div
           className="hero-label"
           variants={smoothReveal}
         >
           <span className="hero-label-line" />
           MOVEMENT <i>•</i> WELLNESS <i>•</i> CARE
-        </motion.div>
+        </m.div>
 
-      </motion.div>
+      </m.div>
 
       {/* RIGHT 3D MODEL */}
-      <motion.div
+      <m.div
         className="hero-3d-wrapper"
         initial={reduce ? false : { opacity: 0, x: 35 }}
         animate={{ opacity: 1, x: 0 }}
@@ -218,7 +218,7 @@ variants={{
         <div className="hero-model-ring" />
 
         {/* FLOATING LABEL */}
-        <motion.div
+        <m.div
           className="hero-floating-badge"
           initial={reduce ? false : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -237,16 +237,16 @@ variants={{
             <strong>BETTER MOVEMENT</strong>
           </span>
 
-        </motion.div>
+        </m.div>
 
-      </motion.div>
+      </m.div>
 
       {/* DECORATIVE ORBITS */}
       <div className="hero-orbit orbit-one" />
       <div className="hero-orbit orbit-two" />
 
       {/* SCROLL INDICATOR */}
-      <motion.a
+      <m.a
         href="#about"
         className="hero-scroll-indicator"
         aria-label="Scroll to learn about the clinic"
@@ -259,7 +259,7 @@ variants={{
       >
         <span>SCROLL TO EXPLORE</span>
         <ArrowDown size={16} />
-      </motion.a>
+      </m.a>
 
     </section>
   );

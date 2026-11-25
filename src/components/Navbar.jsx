@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight, Activity } from "lucide-react";
 import {
-  motion,
+  m,
   AnimatePresence,
   useReducedMotion,
 } from "framer-motion";
@@ -60,7 +60,7 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.header
+      <m.header
         className={`navbar-3d ${scrolled ? "navbar-scrolled" : ""}`}
         initial={reduce ? false : { y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -74,7 +74,7 @@ export default function Navbar() {
 
         {/* LOGO */}
 
-        <motion.div
+        <m.div
           className="brand-3d"
           whileHover={reduce ? {} : {
             scale: 1.04,
@@ -84,7 +84,7 @@ export default function Navbar() {
           transition={{ type: "spring", stiffness: 250 }}
         >
           <Link to="/" className="brand-link">
-            <motion.div
+            <m.div
               className="brand-image-wrap"
               animate={reduce ? {} : {
                 y: [0, -4, 0],
@@ -99,20 +99,20 @@ export default function Navbar() {
                 src="/images/logo-optimized.webp"
                 alt="Sri Ashwini Physiotherapy Clinic"
               />
-            </motion.div>
+            </m.div>
 
             <span className="brand-text">
               <b>SRI ASHWINI</b>
               <small>PHYSIOTHERAPY CLINIC</small>
             </span>
           </Link>
-        </motion.div>
+        </m.div>
 
         {/* DESKTOP NAVIGATION */}
 
         <nav className="nav-3d-links">
           {links.map(([name, url], index) => (
-            <motion.div
+            <m.div
               key={name}
               className="nav-3d-item"
               initial={reduce ? false : {
@@ -133,13 +133,13 @@ export default function Navbar() {
                 {name}
                 <span className="nav-3d-line" />
               </Link>
-            </motion.div>
+            </m.div>
           ))}
         </nav>
 
         {/* APPOINTMENT BUTTON */}
 
-        <motion.div
+        <m.div
           className="nav-book-wrap"
           whileHover={reduce ? {} : {
             y: -4,
@@ -151,11 +151,11 @@ export default function Navbar() {
             <span>Book Appointment</span>
             <ArrowUpRight size={17} />
           </Link>
-        </motion.div>
+        </m.div>
 
         {/* MOBILE MENU BUTTON */}
 
-        <motion.button
+        <m.button
           className="nav-mobile-toggle"
           onClick={() => setOpen(!open)}
           whileTap={{ scale: 0.88, rotate: 8 }}
@@ -163,7 +163,7 @@ export default function Navbar() {
           aria-expanded={open}
         >
           <AnimatePresence mode="wait" initial={false}>
-            <motion.span
+            <m.span
               key={open ? "close" : "menu"}
               initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
               animate={{ opacity: 1, rotate: 0, scale: 1 }}
@@ -171,17 +171,17 @@ export default function Navbar() {
               transition={{ duration: 0.2 }}
             >
               {open ? <X size={24} /> : <Menu size={24} />}
-            </motion.span>
+            </m.span>
           </AnimatePresence>
-        </motion.button>
-      </motion.header>
+        </m.button>
+      </m.header>
 
       {/* MOBILE NAVIGATION */}
 
       <AnimatePresence>
         {open && (
           <>
-            <motion.div
+            <m.div
               className="nav-mobile-backdrop"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -189,7 +189,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
             />
 
-            <motion.nav
+            <m.nav
               className="nav-mobile-panel"
               initial={{ opacity: 0, y: -25, scale: 0.94 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -207,7 +207,7 @@ export default function Navbar() {
               </div>
 
               {links.map(([name, url], index) => (
-                <motion.div
+                <m.div
                   key={name}
                   initial={{ opacity: 0, x: 25 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -224,7 +224,7 @@ export default function Navbar() {
                     {name}
                     <ArrowUpRight size={17} />
                   </Link>
-                </motion.div>
+                </m.div>
               ))}
 
               <Link
@@ -235,7 +235,7 @@ export default function Navbar() {
                 Book Your Appointment
                 <ArrowUpRight size={18} />
               </Link>
-            </motion.nav>
+            </m.nav>
           </>
         )}
       </AnimatePresence>
