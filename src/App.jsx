@@ -5,8 +5,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
-import Terms from "./pages/Terms";
-
 import { MessageCircle } from "lucide-react";
 
 /* =========================================
@@ -21,7 +19,7 @@ const WhyChooseUs = lazy(() => import("./sections/WhyChooseUs"));
 const Gallery = lazy(() => import("./sections/Gallery"));
 const Appointment = lazy(() => import("./sections/Appointment"));
 const Contact = lazy(() => import("./sections/Contact"));
-
+const Terms = lazy(() => import("./pages/Terms"));
 /* =========================================
    LOADING FALLBACK
 ========================================= */

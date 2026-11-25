@@ -11747,3 +11747,10 @@ body {
 .floating-whatsapp {
   background: #075b3b !important;
 }
+
+
+
+/* CLS FIX - keep hero light beam out of layout calculations */
+.hero-light-beam {
+  contain: layout paint;
+}
