@@ -25,16 +25,21 @@ export default function Navbar() {
   const reduce = useReducedMotion();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 35);
-    };
+  const handleScroll = () => {
+    const nextScrolled = window.scrollY > 35;
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    setScrolled((current) =>
+      current === nextScrolled ? current : nextScrolled
+    );
+  };
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
 
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
   useEffect(() => {
     setOpen(false);
   }, [location.pathname]);

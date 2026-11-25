@@ -2,7 +2,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Sparkles, Torus } from "@react-three/drei";
 import { useRef } from "react";
-import * as THREE from "three";
+
 
 /* =========================================
    GLOWING JOINT
@@ -279,6 +279,10 @@ function JointRings({ ringRefs }) {
    One useFrame callback for all animations
 ========================================= */
 
+function lerp(start, end, amount) {
+  return start + (end - start) * amount;
+}
+
 function Scene() {
   const scene = useRef();
   const body = useRef();
@@ -295,14 +299,14 @@ function Scene() {
     const pointer = state.pointer;
 
     if (scene.current) {
-      scene.current.rotation.y = THREE.MathUtils.lerp(
-        scene.current.rotation.y,
-        pointer.x * 0.16,
+      scene.current.rotation.y = lerp(
+  scene.current.rotation.y,
+  pointer.x * 0.16,
         0.035
       );
 
-      scene.current.rotation.x = THREE.MathUtils.lerp(
-        scene.current.rotation.x,
+      scene.current.rotation.x = lerp(
+  scene.current.rotation.x,
         -pointer.y * 0.08,
         0.035
       );

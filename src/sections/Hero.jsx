@@ -21,7 +21,13 @@ export default function Hero() {
   let idleCallbackId;
   let timeoutId;
 
-  if (typeof window.requestIdleCallback === "function") {
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+  if (isMobile) {
+    timeoutId = window.setTimeout(() => {
+      setLoadHero3D(true);
+    }, 2500);
+  } else if (typeof window.requestIdleCallback === "function") {
     idleCallbackId = window.requestIdleCallback(
       () => setLoadHero3D(true),
       { timeout: 1200 }
@@ -77,18 +83,18 @@ export default function Hero() {
       {/* LEFT CONTENT */}
       <motion.div
         className="hero-content"
-        initial={reduce ? false : "hidden"}
-        animate="visible"
-        variants={{
-          hidden: {},
-          visible: {
-            transition: {
-              staggerChildren: reduce ? 0 : 0.12,
-              delayChildren: reduce ? 0 : 0.1,
-            },
-          },
-        }}
-      >
+        initial={false}
+animate="visible"
+variants={{
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: reduce ? 0 : 0.12,
+      delayChildren: 0,
+    },
+  },
+}}
+>
 
         <motion.div
           className="hero-premium-eyebrow"
